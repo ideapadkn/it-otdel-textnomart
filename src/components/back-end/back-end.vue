@@ -1,13 +1,13 @@
 <template>
   <div class="back-end">
-    <h2 style="margin: 80px 0 16px 0;">Бекенд разработчики</h2>
+    <h2 style="margin: 80px 0 16px 0;">BackEnd разработчики</h2>
     <div class="back-content">
       <div 
         class="inner-content" 
         v-for="content in backContent" 
         :key="content.id"
       >
-        <div>{{ content.img }}</div>
+        <img :src="content.img" alt="img">
         <h4 class="title">{{ content.title }}</h4>
         <p class="body">{{ content.body }}</p>
       </div>
@@ -20,11 +20,11 @@
     data() {
       return {
         backContent: [
-          {id: 1, img: 'img', title: 'Исхокжон', body: 'Team Lead Backend'},
-          {id: 2, img: 'img', title: 'Жавохир', body: 'Бекенд разработчик'},
-          {id: 3, img: 'img', title: 'Сарвар ', body: 'Бекенд разработчик'},
-          {id: 4, img: 'img', title: 'Шукурулло', body: 'Бекенд разработчик'},
-          {id: 5, img: 'img', title: 'Жавохир', body: 'Бекенд разработчик'},
+          {id: 1, img: '@/assets/back-end/Исхокжон.png', title: 'Исхокжон', body: 'Team Lead Backend'},
+          {id: 2, img: '@/assets/back-end/Жавохир.png', title: 'Жавохир', body: 'Бекенд разработчик'},
+          {id: 3, img: '@/assets/back-end/Сарвар.png', title: 'Сарвар ', body: 'Бекенд разработчик'},
+          {id: 4, img: '@/assets/back-end/Шукурулло.png', title: 'Шукурулло', body: 'Бекенд разработчик'},
+          {id: 5, img: '@/assets/back-end/Жавохир2.png', title: 'Жавохир', body: 'Бекенд разработчик'},
         ]
       }
     }
@@ -35,12 +35,11 @@
 .back-end {
   margin-left: 92px;
   .back-content {
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
     align-items: flex-start;
     padding: 10px;
     gap: 16px;
-    width: 784px;
     height: 210px;
     background: #FAFAFA;
     border: 1px dashed #D5D8DF;

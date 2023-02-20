@@ -1,10 +1,10 @@
 <template>
-  <div class="web-dizayn">
+  <div class="testing">
     <h2 style="margin: 80px 0 16px 0;">Тестировщики</h2>
-    <div class="web-dizayn-content">
+    <div class="testing-content">
       <div 
         class="inner-content" 
-        v-for="content in webUiUxContent" 
+        v-for="content in testContent" 
         :key="content.id"
       >
         <div>{{ content.img }}</div>
@@ -19,9 +19,11 @@
   export default {
     data() {
       return {
-        webUiUxContent: [
-          {id: 1, img: 'img', title: 'Дмитрий', body: 'Team Lead Web design'},
-          {id: 2, img: 'img', title: 'Хакимбой', body: 'Web design'},
+        testContent: [
+          {id: 1, img: 'img', title: 'Дурбек', body: 'Team Lead Тестировщик'},
+          {id: 2, img: 'img', title: 'Александра', body: 'Тестировщик'},
+          {id: 3, img: 'img', title: 'Ильёс ', body: 'Тестировщик'},
+          {id: 4, img: 'img', title: 'Шахзод', body: 'Тестировщик'},
         ]
       }
     }
@@ -29,9 +31,9 @@
 </script>
 
 <style lang="scss" scoped>
-.web-dizayn {
+.testing {
   margin-left: 92px;
-  .web-dizayn-content {
+  .testing-content {
     display: inline-flex;
     flex-direction: row;
     align-items: flex-start;

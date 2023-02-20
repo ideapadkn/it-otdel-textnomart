@@ -11,14 +11,20 @@
       <p class="body">{{ content.body }}</p>
     </div>
     <back-end />
+    <front-end />
+    <testing />
+    <web-dizayn />
   </div>
 </template>
 
 <script>
 import backEnd from './components/back-end/back-end.vue';
+import frontEnd from './components/front-end/front-end.vue';
+import testing from './components/testing/testing-it.vue';
+import webDizayn from './components/web-dizayn/web-dizayn.vue';
 export default {
   components: {
-    backEnd
+    backEnd, frontEnd, testing, webDizayn
   },
   data() {
     return {
