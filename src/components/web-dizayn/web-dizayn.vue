@@ -1,6 +1,6 @@
 <template>
   <div class="web-dizayn">
-    <h2 style="margin: 80px 0 16px 0;">Тестировщики</h2>
+    <h2 style="margin: 80px 0 16px 0;">Web дизайнеры</h2>
     <div class="web-dizayn-content">
       <div 
         class="inner-content" 

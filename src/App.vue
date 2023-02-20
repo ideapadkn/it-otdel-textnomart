@@ -14,6 +14,8 @@
     <front-end />
     <testing />
     <web-dizayn />
+    <android-ios />
+    <dev-ops />
   </div>
 </template>
 
@@ -22,17 +24,20 @@ import backEnd from './components/back-end/back-end.vue';
 import frontEnd from './components/front-end/front-end.vue';
 import testing from './components/testing/testing-it.vue';
 import webDizayn from './components/web-dizayn/web-dizayn.vue';
+import androidIos from './components/android-ios/android-ios.vue';
+import devOps from './components/dev-ops/dev-ops.vue';
 export default {
   components: {
-    backEnd, frontEnd, testing, webDizayn
+    backEnd, frontEnd, testing, webDizayn, androidIos, devOps
   },
   data() {
     return {
       contents: [
         {id: 1, title: 'Шухрат Менгалиев', body: 'ИТ Директор'}
-      ]
+      ],
+      dialogVisible: false,
     }
-  }
+  },
 }
 </script>
 
