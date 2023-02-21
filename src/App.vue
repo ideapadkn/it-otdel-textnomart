@@ -97,7 +97,7 @@ export default {
         left: 210px;
         height: 2px;
         position: absolute;
-        width: 70%;
+        width: 78%;
         background:#fbc100;
         border-bottom-right-radius: 30px;
       }
@@ -107,6 +107,7 @@ export default {
     display: flex;
     justify-content: space-between;
     margin-left: 309px;
+    margin-bottom: 200px;
     .sort {
       border: 2px solid #333333;
       border-radius: 16px;

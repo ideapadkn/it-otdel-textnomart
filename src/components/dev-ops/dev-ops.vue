@@ -29,7 +29,8 @@
 
 <style lang="scss" scoped>
 .dev-ops {
-  margin-left: 92px;
+  margin-left: 100px;
+  position: relative;
   .dev-ops-content {
     display: inline-flex;
     flex-direction: row;
@@ -40,6 +41,15 @@
     background: #FAFAFA;
     border: 1px dashed #D5D8DF;
     border-radius: 28px;
+    &::before {
+      content: '';
+      height: 2px;
+      width: 50px;
+      background-color: #fbc100;
+      position: absolute;
+      left: -6%;
+      top: 50%;
+    }
     .inner-content {
       padding: 16px 12px;
       text-align: center;
@@ -48,6 +58,7 @@
       background: #FFFFFF;
       box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.08), 0px 0px 2px rgba(0, 0, 0, 0.08);
       border-radius: 24px;
+      cursor: pointer;
     }
   }
 }

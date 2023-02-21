@@ -55,15 +55,8 @@ import myDialog from './my-dialog.vue';
 
 <style lang="scss" scoped>
 .back-end {
-  margin-left: 92px;
+  margin-left: 100px;
   position: relative;
-  &::before {
-    content: '';
-    height: 2px;
-    width: 50px;
-    background-color: #fbc100;
-    position: absolute;
-  }
   .back-content {
     display: inline-flex;
     flex-direction: row;
@@ -74,6 +67,15 @@ import myDialog from './my-dialog.vue';
     background: #FAFAFA;
     border: 1px dashed #D5D8DF;
     border-radius: 28px;
+    &::before {
+      content: '';
+      height: 2px;
+      width: 50px;
+      background-color: #fbc100;
+      position: absolute;
+      left: -6%;
+      top: 50%;
+    }
     .inner-content {
       padding: 16px 12px;
       text-align: center;
