@@ -1,14 +1,25 @@
 <template>
   <div class="container">
     <h1 class="gl-title">Структрура IT подразделения Texnomart</h1>
-    <div 
-      class="content" 
-      v-for="content in contents" 
-      :key="content.id"
-    >
-      <img src="@/assets/ShuhratMengaliev.png" alt="img">
-      <h4 class="title">{{ content.title }}</h4>
-      <p class="body">{{ content.body }}</p>
+    <div class="main-wrapper">
+      <div 
+        class="content" 
+        v-for="content in contents" 
+        :key="content.id"
+      >
+        <img src="@/assets/ShuhratMengaliev.png" alt="img">
+        <h4 class="title">{{ content.title }}</h4>
+        <p class="body">{{ content.body }}</p>
+      </div>
+    </div>
+    <div class="sortByWork">
+      <div 
+        class="sort" 
+        v-for="sort in sortWork" 
+        :key="sort.id"
+      >
+        <h4 class="sort__title">{{ sort.text }}</h4>
+      </div>
     </div>
     <back-end />
     <front-end />
@@ -34,6 +45,12 @@ export default {
     return {
       contents: [
         {id: 1, title: 'Шухрат Менгалиев', body: 'ИТ Директор'}
+      ],
+      sortWork: [
+        {id: Date.now(), text: 'Разработка ПО'},
+        {id: Date.now(), text: 'Системные инженеры'},
+        {id: Date.now(), text: 'Ремонт и переферия'},
+        {id: Date.now(), text: 'Электро монтаж'},
       ],
       dialogVisible: false,
     }
@@ -65,23 +82,43 @@ export default {
     color: #333333;
     margin-bottom: 80px;
   }
-  .content {
-    border: 2px solid #fbc100;
-    width: 210px;
-    height: 198px;
-    border-radius: 32px;
-    padding: 24px 23px;
-    text-align: center;
-    &::before {
-      content:'';   
-      top: 34%;
-      left: 21%;
-      height: 2px;
-      position: absolute;
-      width: 70%;
-      border-bottom-right-radius: 30%;
-      border-end-end-radius: 30%;
-      background:#fbc100;
+  .main-wrapper {
+    position: relative;
+    .content {
+      border: 2px solid #fbc100;
+      width: 210px;
+      height: 198px;
+      border-radius: 32px;
+      padding: 24px 23px;
+      text-align: center;
+      &::before {
+        content:'';   
+        top: 50%;
+        left: 210px;
+        height: 2px;
+        position: absolute;
+        width: 70%;
+        background:#fbc100;
+        border-bottom-right-radius: 30px;
+      }
+    }
+  }
+  .sortByWork {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 309px;
+    .sort {
+      border: 2px solid #333333;
+      border-radius: 16px;
+      padding: 12px 24px;
+      &__title {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+        text-align: center;
+        color: #333333;
+      }
     }
   }
 }

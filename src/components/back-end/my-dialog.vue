@@ -1,5 +1,5 @@
 <template>
-  <div class="dialog" v-if="show" @click="hideDialog">
+  <div class="dialog" v-if="show" @click.stop="hideDialog">
     <div class="dialog__content">
       <div class="content__inner">
         <div class="img">
@@ -44,9 +44,9 @@
           </div>
         </div>
         <div>
-          <p class="info__text">Участвовала в проекте</p>
-          <a class="link" href="#">Texnomart Web Design</a>
-          <a class="link" href="#">Android App</a>
+          <p class="info__text">Участвовал в проекте</p>
+          <a target="_blank" class="link" href="#">Texnomart Web Design</a>
+          <a target="_blank" class="link" href="#">Android App</a>
         </div>
         <div>
           <p class="info__text">Интересы</p>
@@ -139,7 +139,7 @@
         line-height: 16px;
         color: #333333;
         border: 1px solid #D5D8DF;
-        margin-right: 20px;
+        margin-right: 10px;
         padding: 3px 6px;
         border-radius: 30px;
       }
