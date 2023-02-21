@@ -33,7 +33,28 @@
         </div>
       </div>
       <div class="content__inner">
-        
+        <div class="content__inner-item">
+          <div>
+            <p class="info__text">Работает с нами</p>
+            <h3>1 год 5 месяцев</h3>
+          </div>
+          <div>
+            <p class="info__text">ЗП</p>
+            <h3>** *** *** сум</h3>
+          </div>
+        </div>
+        <div>
+          <p class="info__text">Участвовала в проекте</p>
+          <a class="link" href="#">Texnomart Web Design</a>
+          <a class="link" href="#">Android App</a>
+        </div>
+        <div>
+          <p class="info__text">Интересы</p>
+          <span class="span">Теннис</span>
+          <span class="span">CS:GO</span>
+          <span class="span">Кино</span>
+          <span class="span">Путешествия</span>
+        </div>
       </div>
     </div>
   </div>
@@ -85,12 +106,42 @@
         border-top: 1px dashed #D5D8DF;
         border-bottom: 1px dashed #D5D8DF;
       }
+      &:nth-child(3) {
+        flex-direction: column;
+      }
       .block {
         border-right: 1px dashed #D5D8DF;
         padding-right: 60px;
         &:nth-child(3) {
           border: none;
         }
+      }
+      .content__inner-item {
+        display: flex;
+        justify-content: space-between;
+      }
+      .link {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 16px;
+        color: #333333;
+        padding: 4px 8px;
+        background: #EEEEEE;
+        border-radius: 50px;
+        text-decoration: none;
+        margin-right: 6px;
+      }
+      .span {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 16px;
+        color: #333333;
+        border: 1px solid #D5D8DF;
+        margin-right: 20px;
+        padding: 3px 6px;
+        border-radius: 30px;
       }
       .info {
         &__title {
