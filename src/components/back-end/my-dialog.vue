@@ -85,6 +85,7 @@
   background-color: rgba($color: #b7b7b7ca, $alpha: 0.3);
   position: fixed;
   display: flex;
+  z-index: 1000;
   &__content {
     margin: auto;
     border-radius: 24px;

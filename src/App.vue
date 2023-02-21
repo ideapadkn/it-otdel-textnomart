@@ -108,10 +108,20 @@ export default {
     justify-content: space-between;
     margin-left: 309px;
     margin-bottom: 200px;
+    position: relative;
     .sort {
       border: 2px solid #333333;
       border-radius: 16px;
       padding: 12px 24px;
+      &::before {
+        content: '';
+        height: 2px;
+        width: 50px;
+        background-color: #fbc100;
+        position: absolute;
+        top: -30%;
+        left: 6%;
+      }
       &__title {
         font-style: normal;
         font-weight: 500;

@@ -1,6 +1,5 @@
 <template>
     <div 
-      v-if="!contentVisible" 
       class="back-end" 
       @click="showDialog"
     >
@@ -17,8 +16,8 @@
         </div>
       </div>
     </div>
-    <!-- <my-dialog v-model:show="dialogVisible"></my-dialog> -->
-    <div v-else>loading...</div>
+    <my-dialog v-model:show="dialogVisible"></my-dialog>
+    <!-- <div v-else>loading...</div> -->
 </template>
 
 <script>
@@ -44,11 +43,11 @@ import myDialog from './my-dialog.vue';
       showDialog() {
         this.dialogVisible = true;
       },
-      loading() {
-        setTimeout(() => {
-          this.contentVisible = true;
-        }, 2000)
-      }
+      // loading() {
+      //   setTimeout(() => {
+      //     this.contentVisible = true;
+      //   }, 2000)
+      // }
     }
   }
 </script>
@@ -67,7 +66,7 @@ import myDialog from './my-dialog.vue';
     background: #FAFAFA;
     border: 1px dashed #D5D8DF;
     border-radius: 28px;
-    &::before {
+    &::after {
       content: '';
       height: 2px;
       width: 50px;
@@ -75,6 +74,15 @@ import myDialog from './my-dialog.vue';
       position: absolute;
       left: -6%;
       top: 50%;
+    }
+    &::before {
+      content: '';
+      height: 2px;
+      width: 29%;
+      background-color: #fbc100;
+      position: absolute;
+      top: -20%;
+      left: -6%;
     }
     .inner-content {
       padding: 16px 12px;
