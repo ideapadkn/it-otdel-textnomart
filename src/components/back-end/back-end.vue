@@ -7,14 +7,13 @@
         v-for="content in backContent" 
         :key="content.id"
       >
-        <my-dialog v-model:show="dialogVisible">
-          <img :src="content.img" alt="img">
-        </my-dialog>
+        <!-- <img :src="require('@/assets/back-end' + content.img)" alt="img"> -->
         <h4 class="title">{{ content.title }}</h4>
         <p class="body">{{ content.body }}</p>
       </div>
     </div>
   </div>
+  <my-dialog v-model:show="dialogVisible"></my-dialog>
 </template>
 
 <script>
@@ -26,11 +25,11 @@ import myDialog from './my-dialog.vue';
     data() {
       return {
         backContent: [
-          {id: 1, img: '@/assets/back-end/Исхокжон.png', title: 'Исхокжон', body: 'Team Lead Backend'},
-          {id: 2, img: '@/assets/back-end/Жавохир.png', title: 'Жавохир', body: 'Бекенд разработчик'},
-          {id: 3, img: '@/assets/back-end/Сарвар.png', title: 'Сарвар ', body: 'Бекенд разработчик'},
-          {id: 4, img: '@/assets/back-end/Шукурулло.png', title: 'Шукурулло', body: 'Бекенд разработчик'},
-          {id: 5, img: '@/assets/back-end/Жавохир2.png', title: 'Жавохир', body: 'Бекенд разработчик'},
+          {id: 1, img: 'Исхокжон.png', title: 'Исхокжон', body: 'Team Lead Backend'},
+          {id: 2, img: 'Жавохир.png', title: 'Жавохир', body: 'Бекенд разработчик'},
+          {id: 3, img: 'Сарвар.png', title: 'Сарвар ', body: 'Бекенд разработчик'},
+          {id: 4, img: 'Шукурулло.png', title: 'Шукурулло', body: 'Бекенд разработчик'},
+          {id: 5, img: 'Жавохир2.png', title: 'Жавохир', body: 'Бекенд разработчик'},
         ],
         dialogVisible: false,
       }
@@ -46,6 +45,14 @@ import myDialog from './my-dialog.vue';
 <style lang="scss" scoped>
 .back-end {
   margin-left: 92px;
+  position: relative;
+  &::before {
+    content: '';
+    height: 2px;
+    width: 50px;
+    background-color: #fbc100;
+    position: absolute;
+  }
   .back-content {
     display: inline-flex;
     flex-direction: row;

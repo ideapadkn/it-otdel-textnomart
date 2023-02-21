@@ -72,6 +72,17 @@ export default {
     border-radius: 32px;
     padding: 24px 23px;
     text-align: center;
+    &::before {
+      content:'';   
+      top: 34%;
+      left: 21%;
+      height: 2px;
+      position: absolute;
+      width: 70%;
+      border-bottom-right-radius: 30%;
+      border-end-end-radius: 30%;
+      background:#fbc100;
+    }
   }
 }
 .title {
